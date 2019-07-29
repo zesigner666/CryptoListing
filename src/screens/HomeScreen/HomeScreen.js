@@ -28,10 +28,10 @@ class HomeScreen extends Component {
   };
 
   componentDidMount() {
-    this.remoteAxios()
+    this.getCryptoData()
   }
 
-  remoteAxios = () =>{
+  getCryptoData = () =>{
     this.setState({ loading: true });
     axios.defaults.headers.common['X-CMC_PRO_API_KEY'] = endPoint.KEY_TEST;
     axios.get(endPoint.END_POINT_TEST, {
