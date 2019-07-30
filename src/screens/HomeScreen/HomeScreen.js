@@ -33,8 +33,8 @@ class HomeScreen extends Component {
 
   getCryptoData = () =>{
     this.setState({ loading: true });
-    axios.defaults.headers.common['X-CMC_PRO_API_KEY'] = endPoint.KEY_TEST;
-    axios.get(endPoint.END_POINT_TEST, {
+    axios.defaults.headers.common['X-CMC_PRO_API_KEY'] = endPoint.KEY_PROD;
+    axios.get(endPoint.END_POINT_PROD, {
       params: {
         start: '1',
         limit: '70',
